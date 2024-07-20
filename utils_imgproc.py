@@ -29,7 +29,7 @@ def norm_by_imagenet(img):
             im[:, :, 1] = (im[:, :, 1] - 0.456) / 0.224
             im[:, :, 2] = (im[:, :, 2] - 0.406) / 0.225
             imgs.append(im)
-        return np.array(imgs)
+        return np.array(imgs,dtype=object) ############modificado
     else:
         print('Wrong shape of the input.')
         return None

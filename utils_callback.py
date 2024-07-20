@@ -1,7 +1,8 @@
 import os
 import cv2
 import numpy as np
-from skimage.measure import compare_psnr, compare_ssim
+#from skimage.measure import compare_psnr, compare_ssim
+from skimage.metrics import peak_signal_noise_ratio, structural_similarity
 import matplotlib.pyplot as plt
 
 

@@ -22,7 +22,7 @@ def gen_paths_img_dm(path_file_root='data/paths_train_val_test', dataset='A'):
         with open(i, 'r') as fin:
             dm_paths.append(
                 sorted(
-                    [l.rstrip().replace('images', 'ground').replace('.jpg', '.h5') for l in fin.readlines()],
+                    [l.rstrip().replace('images', 'ground_truth').replace('.jpg', '.h5') for l in fin.readlines()],
                     key=lambda x: int(x.split('_')[-1].split('.')[0]))
             )
     return img_paths, dm_paths
@@ -33,7 +33,8 @@ def gen_var_from_paths(paths, stride=1, unit_len=16):
     format_suffix = paths[0].split('.')[-1]
     if format_suffix == 'h5':
         for ph in paths:
-            dm = h5py.File(ph, 'r')['density'].value.astype(np.float32)
+            #dm = h5py.File(ph, 'r')['density'].value.astype(np.float32)
+            dm = np.asarray(h5py.File(ph, 'r')['density'])
             if unit_len:
                 dm = fix_singular_shape(dm, unit_len=unit_len)
             dm = smallize_density_map(dm, stride=stride)
@@ -47,7 +48,8 @@ def gen_var_from_paths(paths, stride=1, unit_len=16):
         # vars = norm_by_imagenet(vars)
     else:
         print('Format suffix is wrong.')
-    return np.array(vars)
+    return np.array(vars,dtype=object) ##############modiicado
+    #return np.array(vars)
 
 
 def gen_density_map_gaussian(im, points, sigma=4):

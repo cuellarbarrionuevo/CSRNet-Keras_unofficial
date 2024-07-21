@@ -44,8 +44,11 @@ def eval_loss(model, x, y, quality=False):
         psnr, ssim = [], []
         for idx_pd in range(len(preds)):
             data_range = max([np.max(preds[idx_pd]), np.max(DM[idx_pd])]) - min([np.min(preds[idx_pd]), np.min(DM[idx_pd])])
-            psnr_ = compare_psnr(preds[idx_pd], DM[idx_pd], data_range=data_range)
-            ssim_ = compare_ssim(preds[idx_pd], DM[idx_pd], data_range=data_range)
+            #psnr_ = compare_psnr(preds[idx_pd], DM[idx_pd], data_range=data_range)
+            psnr_ = peak_signal_noise_ratio(preds[idx_pd], DM[idx_pd], data_range=data_range)
+
+            #ssim_ = compare_ssim(preds[idx_pd], DM[idx_pd], data_range=data_range)
+            ssim_ =structural_similarity(preds[idx_pd], DM[idx_pd], data_range=data_range)
             psnr.append(psnr_)
             ssim.append(ssim_)
         return loss_MAE, loss_RMSE, loss_SFN, loss_MAPE, np.mean(psnr), np.mean(ssim)

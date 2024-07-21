@@ -51,4 +51,4 @@
 
 1. Download dataset;
 2. Data generation: run the`generate_datasets.ipynb `.
-3. Run the `main.ipynb` to train, test, analyze and evaluate the image quality.
+3. Run the `main.ipynb` to train, test, analyze and evaluate the image quality..

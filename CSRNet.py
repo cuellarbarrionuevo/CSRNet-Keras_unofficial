@@ -28,12 +28,12 @@ def CSRNet(input_shape=(None, None, 3)):
     x = Conv2D(512, (3, 3), strides=(1, 1), padding='same', activation='relu')(x)
 
     # back-end
-    x = Conv2D(512, (3, 3), strides=(1, 1), padding='same', dilation_rate=2, activation='relu', kernel_initializer=dilated_conv_kernel_initializer)(x)
-    x = Conv2D(512, (3, 3), strides=(1, 1), padding='same', dilation_rate=2, activation='relu', kernel_initializer=dilated_conv_kernel_initializer)(x)
-    x = Conv2D(512, (3, 3), strides=(1, 1), padding='same', dilation_rate=2, activation='relu', kernel_initializer=dilated_conv_kernel_initializer)(x)
-    x = Conv2D(256, (3, 3), strides=(1, 1), padding='same', dilation_rate=2, activation='relu', kernel_initializer=dilated_conv_kernel_initializer)(x)
-    x = Conv2D(128, (3, 3), strides=(1, 1), padding='same', dilation_rate=2, activation='relu', kernel_initializer=dilated_conv_kernel_initializer)(x)
-    x = Conv2D(64, (3, 3), strides=(1, 1), padding='same', dilation_rate=2, activation='relu', kernel_initializer=dilated_conv_kernel_initializer)(x)
+    x = Conv2D(512, (3, 3), strides=(1, 1), padding='same', dilation_rate=1, activation='relu', kernel_initializer=dilated_conv_kernel_initializer)(x)
+    x = Conv2D(512, (3, 3), strides=(1, 1), padding='same', dilation_rate=1, activation='relu', kernel_initializer=dilated_conv_kernel_initializer)(x)
+    x = Conv2D(512, (3, 3), strides=(1, 1), padding='same', dilation_rate=1, activation='relu', kernel_initializer=dilated_conv_kernel_initializer)(x)
+    x = Conv2D(256, (3, 3), strides=(1, 1), padding='same', dilation_rate=1, activation='relu', kernel_initializer=dilated_conv_kernel_initializer)(x)
+    x = Conv2D(128, (3, 3), strides=(1, 1), padding='same', dilation_rate=1, activation='relu', kernel_initializer=dilated_conv_kernel_initializer)(x)
+    x = Conv2D(64, (3, 3), strides=(1, 1), padding='same', dilation_rate=1, activation='relu', kernel_initializer=dilated_conv_kernel_initializer)(x)
 
     output_flow = Conv2D(1, 1, strides=(1, 1), padding='same', activation='relu', kernel_initializer=dilated_conv_kernel_initializer)(x)
     model = Model(inputs=input_flow, outputs=output_flow)

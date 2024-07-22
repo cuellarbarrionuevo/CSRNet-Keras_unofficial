@@ -1,4 +1,4 @@
-C:\Users\oriol\ShanghaiTec\part_A_final\train_data\images\IMG_1.jpg
+C:\Users\oriol\ShanghaiTec\part_A_final\train_data\images\IMG_100.jpg
 C:\Users\oriol\ShanghaiTec\part_B_final\train_data\images\IMG_1.jpg
 C:\Users\oriol\ShanghaiTec\part_B_final\train_data\images\IMG_2.jpg
 C:\Users\oriol\ShanghaiTec\part_B_final\train_data\images\IMG_3.jpg

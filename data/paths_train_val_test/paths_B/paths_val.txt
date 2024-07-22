@@ -18,4 +18,3 @@ C:\Users\oriol\ShanghaiTec\part_B_final\test_data\images\IMG_17.jpg
 C:\Users\oriol\ShanghaiTec\part_B_final\test_data\images\IMG_18.jpg
 C:\Users\oriol\ShanghaiTec\part_B_final\test_data\images\IMG_19.jpg
 C:\Users\oriol\ShanghaiTec\part_B_final\test_data\images\IMG_20.jpg
-

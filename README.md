@@ -1,5 +1,5 @@
 # CSRNet-Keras
-> An unofficial implementation of CSRNet for crowd counting in Keras-Tensorflow.
+> Implementacion de CSRNet for crowd counting con Keras-Tensorflow.
 
 ---
 

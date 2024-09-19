@@ -7,7 +7,7 @@
 
 + Original_paper: [CSRNet: Dilated Convolutional Neural Networks for Understanding the Highly Congested Scenes](https://www.researchgate.net/publication/323444534_CSRNet_Dilated_Convolutional_Neural_Networks_for_Understanding_the_Highly_Congested_Scenes).
 
-### Results now:
+### Resultados:
 
 | Dataset |  MAE  |  RMSE  | Sum of Frobenius Norm |  MAPE  | PSNR  | SSIM |
 | :-----: | :---: | :----: | :-------------------: | :----: | :---: | :--: |
@@ -15,11 +15,11 @@
 |   SHA   | 67.98 | 103.24 |        8.38e-1        | 17.29% | 21.51 | 0.60 |
 > Weights can be downloaded in the [release](https://github.com/ZhengPeng7/CSRNet-Keras/releases/tag/v1.0).
 
-### Dataset:
+### BBDD:
 
 - **ShanghaiTech dataset**: [dropbox](<https://www.dropbox.com/s/fipgjqxl7uj8hd5/ShanghaiTech.zip?dl=0>) or [Baidu Disk](<http://pan.baidu.com/s/1nuAYslz>).
 
-### Training Parameters:
+### Parametros de entrenameinto:
 
 1. *Loss* = MSE;
 
